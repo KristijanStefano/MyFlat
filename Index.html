@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFlat</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="js/index.umd.js"></script>
+  </head>
+
+  <body>
+    <!-- HOME SECTION -->
+    <section id="home" class="section-home bg-dark m-auto pb-5 px-3 px-md-0">
+      <div class="container px-2">
+        <div class="row py-5 justify-content-between m-auto mb-5">
+          <div class="col">
+            <a href="#">
+              <div class="section-home__logo"><img src="img/logo.png" alt="My Flat logo" /></div
+            ></a>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="d-flex gap-4 align-items-center justify-content-end">
+              <span class="section-home__text">Stay connected with us</span>
+              <div class="d-flex gap-2">
+                <a href="https://www.facebook.com/" class="nav__social">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image
+                      class="svg-img"
+                      id="fb"
+                      width="30"
+                      height="30"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFCwi6AGJAAACA0lEQVQ4y5XVzW9MYRTH8c99ZtqZtsiISrzE28aiC6kmtVMLIgQLiTb27IwNO3+AiA0JCwsWrIQFESRWEiTSeEk0sRERK4SqLqqtMnMsTJqWzDVzns299zzf+/vdc8+TkwUkq2y33xYVSfOomzTmric+qZEFBQOOK7nuha8iB870GjRizkXP1ESKwbgV1eiKLLSwsuiKatyObZHE2rgW1ZawhasaV2NNsl3JFe3GZZ2Gkv1umm0b/uGGfWIsNrRtWoj1MVZUMZ6rscYeG3WCX2573nj+VaUoy/k5mXVOqfngO9hrfB4OWTFXtWRYzTlvG/cdsoXp9B94t0vzKGmxy3zlZLV3WGrEsLKNzrYOUxDoc8B5E+retwP/sdmt5sG/hW0OL1OwfL4mBRXMLG6n5vAdq9TNCMzq99gSl5xpDe522BthBqP6cFKlVdtMmW5c1U1jVk+rcIcdNpkyqq5iq6I+n1uFHzqoU5/Npg24YVTdg1bhE+gx2qj1Uwf+3ZLfnp05+0KWxOJm/yua5zr8TCb15sC1ppkVviWvDOa8/0eT057p9zq555ByEzSaKpeMuJ88NueIduOonx4lH12w0zHl3MItNFxWtctFH4vqXjrtuCHXPTex6Bu7JN0yJQXdKFhpwIg5Z7xQz+YH3VBj0C3UT3p9EcqWGEfNhNfue/Rn0P0GAZPfxq/JBTwAAAAASUVORK5CYII="
+                    />
+                  </svg>
+                </a>
+
+                <a href="https://www.instagram.com/" class="nav__social">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image
+                      class="svg-img"
+                      id="twitter"
+                      width="30"
+                      height="30"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFRltQPTrAAACe0lEQVQ4y53VX2jVZRjA8c/vnN823Rhrm1O8aOVNyGYwUIQmeqMDLYMuohu7ss1E6CowQcGLCAoG3dhVaUEahTdhyNqstqL/QbOWw38EpiBJOJouzNM5jxfndDxn23HO57l6/3zf93ne53mfJwlguc2e1K3JvWXGpJM+dw2EEE/EWAzHtmiPdAFdFk/HSHwZG0Moor/E7rAI3R2/Rm8QHTEaA4tCheiP0ejI6HPL2xYr7/hHnzgW22edmo3kPu7eFkeTGNfnr6pTUyEUSqPE81ql/nQMPfImQLtTqSbXy9gqex33BbKyCsJD9puRU6fNoL+t9qMzCpjSnCIpw5t1eU6DIXkZpPa75FBp9QVNmrzoK+NIRCoq4Bavu+oV3QYV0KWljHIY1x3UXnInMlXe5nU47VUZ79mjQ5dPqixrtdYbvr/7ONXwI5h0wQaPeVmPQUq2BZ5x20duzg+32Okz38kZ861ODf4o5XAiETr97kZlWCrlliN+k5XHbRcrVor/J6eucnu1z9MKbsjXyKp6S12tDR+33IDGGvB6GT/Uhqecscu6GvAmOVdqw5w35tK86BorfVw9NRseM6nfOitmzTfa5azT94ITLU7o8YHuitSg3j7T3pptTGWoNtlpSLOffegbISkFqNNLcg7M9SQtbyGj1yrvOlgaBx61xeOueW0OGZIkzltd/rsPe1aDrMR/JZfqpb726TwPWGciNaOtXAwue1OnPs1yQta/xv1UI3CtpsXROWXo/nRrvC92xNADwSdjR8aIJQYsVvo1GhGi9wGK/kSx6Bd7xmgMx9ZoXbDdrIjtMfx/u0nKjW6Lp3RbuoC5084ZcqrY6O4ADNiVqeR36bsAAAAASUVORK5CYII="
+                    />
+                  </svg>
+                </a>
+
+                <a href="#" class="nav__social">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                    <image
+                      class="svg-img"
+                      id="yt"
+                      width="30"
+                      height="30"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFggs3YfaAAAB40lEQVQ4y52VT0hUURTGf+/5BHMaafyTUAsJ2rlzVUMipUbWhDAuQmZXDpgkIbVIceVKEKIom6KCFrmQIFw4yIzEpBs3algo2qaFu0ojQXHl1+Kp+F4z783zu7tz7u+ew72X8xkCgNM0c516QnhrmxXSfOInAELooj4rozZVyfJZ1bqprGbUKISNLqlbBFjd+qqoQDXKKRkIRahLOdWYtLLLa4LqDTu0ojHFHGee1F11FlG7Te/RF1U7goNa16xSOusDV2nRJMSmo6GrPCZBLR+45dn4H8ImYLheMsI6cca5z0tOFYQNZCIXvP9reMo9wqSJecGFtcgdxhjgOSX5N3jBsMsLeqlgjivBYYAFennFCKOUBofhL29JEGaOJuf9FAMDrJLkHSNEjwNDOefY4VdwuITLTHCeTr4fDVtFoGdI0kGKlDvhDzfTh0U7P/5PecMRemjnI8P5017wJR4Qpof5QhssjMPfbOvgJR8RJ0c/ewVIYVjggkNsUsczKhli0qMvkz2LbSr5fSQ4zUPiLHHbEc13H1sWy1xwVHjCBhuM46cG1lBCU4FnJ0JpJUyylJH0reNWF+VkEYoeY+h/s4e+7Rk5ZXRNEV+7qVVMmQO7MQ6NroUb1HPCp90t1phi2ja6f6mnWy+aqqt6AAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gap-5">
+          <div class="col-md-7">
+            <h1 class="text-white mb-3 display-5">Hello to Our Awesome New Template <span style="font-weight: 600">MyFlat</span> <span class="text-primary-default">.</span></h1>
+            <p class="text-muted mb-5">
+              The Best Unbounce templates that are considered to be within these categories win $300 each. We have listed examples of the types of templates you may consider to submit in these
+              categories however you are not limited to design only with these ideas.
+            </p>
+            <div class="row text-white align-items-center">
+              <div class="col-md-8"><h5>The Best Platform Providing Homes And Flats Ever Made On Earth!</h5></div>
+              <div class="rate-box col-md-4 text-center mt-3 mt-md-0">
+                <div class="stars d-flex justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+                    <image
+                      width="50"
+                      height="47"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEV0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wAAAAD7RMTkAAAAf3RSTlMAKSp9zyV3yyD+09Jyf8YsKxvYboRtwDEY/dwXaIq7NRT74QFijo+3O1Xu5QLmVh34zHx4+qcQedngPdoMnPyDBFPtyCPJHL3yYL52qTM/C5qFBVHsiVKmTKgI8AfzCaJOH/FQV++knU90+bpL6iaRiwag0edFtBVK957VLpcK0XC16AAAAAFiS0dEgGW9nmgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RBQhNMsZIAAACLklEQVRIx5WU+V8SQRiHp1R0Sy2BEE1dl6VEohRCUkNSM0UTD9C4AzEob/G+v/96nMKys+vO95d39pnPM/Pu7EGIQp49J6xpamJWmptZjRaghVHRATpGpRVoZTPauBcvuTYmpR0dHWhnUjrx6jU6WYwuTk+InutiUAwwEmLEGwbFhG5CumHSbph7eoult+etZqUP/cXSjz7NygD4YuExoNUYFCxisYoWYVCjYsW78uA9rBqVIdjKAxuGaPPDdsjywVGec3yUz9k/ETJiAkadkriq67mkfBQwjZTW+uzGmOfpfj1jcH+p7E/4cUxMPmVMWvCVr116p+D7Nq0mTBt9mPJK0Mwsvs8pG3M/MDvTCOcX4F9UMhb9WJqXY8dPN5app+BZhlvnoK4V0MOyIscrFugDSvuvrsG3HpSy4LoPa6sqBxPawKaUbGLjF1FNGBEpiCCqbsT88YSUJOLJ36pKCKlGlIJ6Y7K+CEkjrLGvra1qZxl/TEXZfuzrTzY7XBnmsK2i5JAuVe9fCEL1NfyHnLKRyGRKfQUKH4PNNoHxQD2lJl1aT9zZRbTwsnmi2N0R6/amJVXs2ryHZOXHYk1iz1x/h/K+4oWz2T+A87BKDp042Kc838dEEI4dcdxxvobyxxx3FKM8rUpO4DrF2bkUnp/h1IUTupHPQsDFZSO+vCjgbJ6qXAHXBlHORcM1cEVVbnB7R9//7hY3NB603z8oneXDvT1IwXyIqCRU++v9B94PlF5rUxyrAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+                    <image
+                      width="50"
+                      height="47"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEV0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wAAAAD7RMTkAAAAf3RSTlMAKSp9zyV3yyD+09Jyf8YsKxvYboRtwDEY/dwXaIq7NRT74QFijo+3O1Xu5QLmVh34zHx4+qcQedngPdoMnPyDBFPtyCPJHL3yYL52qTM/C5qFBVHsiVKmTKgI8AfzCaJOH/FQV++knU90+bpL6iaRiwag0edFtBVK957VLpcK0XC16AAAAAFiS0dEgGW9nmgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RBQhNMsZIAAACLklEQVRIx5WU+V8SQRiHp1R0Sy2BEE1dl6VEohRCUkNSM0UTD9C4AzEob/G+v/96nMKys+vO95d39pnPM/Pu7EGIQp49J6xpamJWmptZjRaghVHRATpGpRVoZTPauBcvuTYmpR0dHWhnUjrx6jU6WYwuTk+InutiUAwwEmLEGwbFhG5CumHSbph7eoult+etZqUP/cXSjz7NygD4YuExoNUYFCxisYoWYVCjYsW78uA9rBqVIdjKAxuGaPPDdsjywVGec3yUz9k/ETJiAkadkriq67mkfBQwjZTW+uzGmOfpfj1jcH+p7E/4cUxMPmVMWvCVr116p+D7Nq0mTBt9mPJK0Mwsvs8pG3M/MDvTCOcX4F9UMhb9WJqXY8dPN5app+BZhlvnoK4V0MOyIscrFugDSvuvrsG3HpSy4LoPa6sqBxPawKaUbGLjF1FNGBEpiCCqbsT88YSUJOLJ36pKCKlGlIJ6Y7K+CEkjrLGvra1qZxl/TEXZfuzrTzY7XBnmsK2i5JAuVe9fCEL1NfyHnLKRyGRKfQUKH4PNNoHxQD2lJl1aT9zZRbTwsnmi2N0R6/amJVXs2ryHZOXHYk1iz1x/h/K+4oWz2T+A87BKDp042Kc838dEEI4dcdxxvobyxxx3FKM8rUpO4DrF2bkUnp/h1IUTupHPQsDFZSO+vCjgbJ6qXAHXBlHORcM1cEVVbnB7R9//7hY3NB603z8oneXDvT1IwXyIqCRU++v9B94PlF5rUxyrAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+                    <image
+                      width="50"
+                      height="47"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEV0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wAAAAD7RMTkAAAAf3RSTlMAKSp9zyV3yyD+09Jyf8YsKxvYboRtwDEY/dwXaIq7NRT74QFijo+3O1Xu5QLmVh34zHx4+qcQedngPdoMnPyDBFPtyCPJHL3yYL52qTM/C5qFBVHsiVKmTKgI8AfzCaJOH/FQV++knU90+bpL6iaRiwag0edFtBVK957VLpcK0XC16AAAAAFiS0dEgGW9nmgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RBQhNMsZIAAACLklEQVRIx5WU+V8SQRiHp1R0Sy2BEE1dl6VEohRCUkNSM0UTD9C4AzEob/G+v/96nMKys+vO95d39pnPM/Pu7EGIQp49J6xpamJWmptZjRaghVHRATpGpRVoZTPauBcvuTYmpR0dHWhnUjrx6jU6WYwuTk+InutiUAwwEmLEGwbFhG5CumHSbph7eoult+etZqUP/cXSjz7NygD4YuExoNUYFCxisYoWYVCjYsW78uA9rBqVIdjKAxuGaPPDdsjywVGec3yUz9k/ETJiAkadkriq67mkfBQwjZTW+uzGmOfpfj1jcH+p7E/4cUxMPmVMWvCVr116p+D7Nq0mTBt9mPJK0Mwsvs8pG3M/MDvTCOcX4F9UMhb9WJqXY8dPN5app+BZhlvnoK4V0MOyIscrFugDSvuvrsG3HpSy4LoPa6sqBxPawKaUbGLjF1FNGBEpiCCqbsT88YSUJOLJ36pKCKlGlIJ6Y7K+CEkjrLGvra1qZxl/TEXZfuzrTzY7XBnmsK2i5JAuVe9fCEL1NfyHnLKRyGRKfQUKH4PNNoHxQD2lJl1aT9zZRbTwsnmi2N0R6/amJVXs2ryHZOXHYk1iz1x/h/K+4oWz2T+A87BKDp042Kc838dEEI4dcdxxvobyxxx3FKM8rUpO4DrF2bkUnp/h1IUTupHPQsDFZSO+vCjgbJ6qXAHXBlHORcM1cEVVbnB7R9//7hY3NB603z8oneXDvT1IwXyIqCRU++v9B94PlF5rUxyrAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+                    <image
+                      width="50"
+                      height="47"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEV0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wAAAAD7RMTkAAAAf3RSTlMAKSp9zyV3yyD+09Jyf8YsKxvYboRtwDEY/dwXaIq7NRT74QFijo+3O1Xu5QLmVh34zHx4+qcQedngPdoMnPyDBFPtyCPJHL3yYL52qTM/C5qFBVHsiVKmTKgI8AfzCaJOH/FQV++knU90+bpL6iaRiwag0edFtBVK957VLpcK0XC16AAAAAFiS0dEgGW9nmgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RBQhNMsZIAAACLklEQVRIx5WU+V8SQRiHp1R0Sy2BEE1dl6VEohRCUkNSM0UTD9C4AzEob/G+v/96nMKys+vO95d39pnPM/Pu7EGIQp49J6xpamJWmptZjRaghVHRATpGpRVoZTPauBcvuTYmpR0dHWhnUjrx6jU6WYwuTk+InutiUAwwEmLEGwbFhG5CumHSbph7eoult+etZqUP/cXSjz7NygD4YuExoNUYFCxisYoWYVCjYsW78uA9rBqVIdjKAxuGaPPDdsjywVGec3yUz9k/ETJiAkadkriq67mkfBQwjZTW+uzGmOfpfj1jcH+p7E/4cUxMPmVMWvCVr116p+D7Nq0mTBt9mPJK0Mwsvs8pG3M/MDvTCOcX4F9UMhb9WJqXY8dPN5app+BZhlvnoK4V0MOyIscrFugDSvuvrsG3HpSy4LoPa6sqBxPawKaUbGLjF1FNGBEpiCCqbsT88YSUJOLJ36pKCKlGlIJ6Y7K+CEkjrLGvra1qZxl/TEXZfuzrTzY7XBnmsK2i5JAuVe9fCEL1NfyHnLKRyGRKfQUKH4PNNoHxQD2lJl1aT9zZRbTwsnmi2N0R6/amJVXs2ryHZOXHYk1iz1x/h/K+4oWz2T+A87BKDp042Kc838dEEI4dcdxxvobyxxx3FKM8rUpO4DrF2bkUnp/h1IUTupHPQsDFZSO+vCjgbJ6qXAHXBlHORcM1cEVVbnB7R9//7hY3NB603z8oneXDvT1IwXyIqCRU++v9B94PlF5rUxyrAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="47" viewBox="0 0 50 47">
+                    <image
+                      width="50"
+                      height="47"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAvCAMAAACWqWnGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABg1BMVEV0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wB0/wAAAAD7RMTkAAAAf3RSTlMAKSp9zyV3yyD+09Jyf8YsKxvYboRtwDEY/dwXaIq7NRT74QFijo+3O1Xu5QLmVh34zHx4+qcQedngPdoMnPyDBFPtyCPJHL3yYL52qTM/C5qFBVHsiVKmTKgI8AfzCaJOH/FQV++knU90+bpL6iaRiwag0edFtBVK957VLpcK0XC16AAAAAFiS0dEgGW9nmgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RBQhNMsZIAAACLklEQVRIx5WU+V8SQRiHp1R0Sy2BEE1dl6VEohRCUkNSM0UTD9C4AzEob/G+v/96nMKys+vO95d39pnPM/Pu7EGIQp49J6xpamJWmptZjRaghVHRATpGpRVoZTPauBcvuTYmpR0dHWhnUjrx6jU6WYwuTk+InutiUAwwEmLEGwbFhG5CumHSbph7eoult+etZqUP/cXSjz7NygD4YuExoNUYFCxisYoWYVCjYsW78uA9rBqVIdjKAxuGaPPDdsjywVGec3yUz9k/ETJiAkadkriq67mkfBQwjZTW+uzGmOfpfj1jcH+p7E/4cUxMPmVMWvCVr116p+D7Nq0mTBt9mPJK0Mwsvs8pG3M/MDvTCOcX4F9UMhb9WJqXY8dPN5app+BZhlvnoK4V0MOyIscrFugDSvuvrsG3HpSy4LoPa6sqBxPawKaUbGLjF1FNGBEpiCCqbsT88YSUJOLJ36pKCKlGlIJ6Y7K+CEkjrLGvra1qZxl/TEXZfuzrTzY7XBnmsK2i5JAuVe9fCEL1NfyHnLKRyGRKfQUKH4PNNoHxQD2lJl1aT9zZRbTwsnmi2N0R6/amJVXs2ryHZOXHYk1iz1x/h/K+4oWz2T+A87BKDp042Kc838dEEI4dcdxxvobyxxx3FKM8rUpO4DrF2bkUnp/h1IUTupHPQsDFZSO+vCjgbJ6qXAHXBlHORcM1cEVVbnB7R9//7hY3NB603z8oneXDvT1IwXyIqCRU++v9B94PlF5rUxyrAAAAAElFTkSuQmCC"
+                    />
+                  </svg>
+                </div>
+                <span class="text-muted fa-italic fs-10"> Rate By www.PixFart.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-md-none mb-4 mt-5">
+            <div class="d-flex gap-4 align-items-center justify-content-center">
+              <span class="section-home__text">Stay connected with us</span>
+              <div class="d-flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                  <image
+                    id="fb"
+                    width="30"
+                    height="30"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFCwi6AGJAAACA0lEQVQ4y5XVzW9MYRTH8c99ZtqZtsiISrzE28aiC6kmtVMLIgQLiTb27IwNO3+AiA0JCwsWrIQFESRWEiTSeEk0sRERK4SqLqqtMnMsTJqWzDVzns299zzf+/vdc8+TkwUkq2y33xYVSfOomzTmric+qZEFBQOOK7nuha8iB870GjRizkXP1ESKwbgV1eiKLLSwsuiKatyObZHE2rgW1ZawhasaV2NNsl3JFe3GZZ2Gkv1umm0b/uGGfWIsNrRtWoj1MVZUMZ6rscYeG3WCX2573nj+VaUoy/k5mXVOqfngO9hrfB4OWTFXtWRYzTlvG/cdsoXp9B94t0vzKGmxy3zlZLV3WGrEsLKNzrYOUxDoc8B5E+retwP/sdmt5sG/hW0OL1OwfL4mBRXMLG6n5vAdq9TNCMzq99gSl5xpDe522BthBqP6cFKlVdtMmW5c1U1jVk+rcIcdNpkyqq5iq6I+n1uFHzqoU5/Npg24YVTdg1bhE+gx2qj1Uwf+3ZLfnp05+0KWxOJm/yua5zr8TCb15sC1ppkVviWvDOa8/0eT057p9zq555ByEzSaKpeMuJ88NueIduOonx4lH12w0zHl3MItNFxWtctFH4vqXjrtuCHXPTex6Bu7JN0yJQXdKFhpwIg5Z7xQz+YH3VBj0C3UT3p9EcqWGEfNhNfue/Rn0P0GAZPfxq/JBTwAAAAASUVORK5CYII="
+                  />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                  <image
+                    id="twitter"
+                    width="30"
+                    height="30"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFRltQPTrAAACe0lEQVQ4y53VX2jVZRjA8c/vnN823Rhrm1O8aOVNyGYwUIQmeqMDLYMuohu7ss1E6CowQcGLCAoG3dhVaUEahTdhyNqstqL/QbOWw38EpiBJOJouzNM5jxfndDxn23HO57l6/3zf93ne53mfJwlguc2e1K3JvWXGpJM+dw2EEE/EWAzHtmiPdAFdFk/HSHwZG0Moor/E7rAI3R2/Rm8QHTEaA4tCheiP0ejI6HPL2xYr7/hHnzgW22edmo3kPu7eFkeTGNfnr6pTUyEUSqPE81ql/nQMPfImQLtTqSbXy9gqex33BbKyCsJD9puRU6fNoL+t9qMzCpjSnCIpw5t1eU6DIXkZpPa75FBp9QVNmrzoK+NIRCoq4Bavu+oV3QYV0KWljHIY1x3UXnInMlXe5nU47VUZ79mjQ5dPqixrtdYbvr/7ONXwI5h0wQaPeVmPQUq2BZ5x20duzg+32Okz38kZ861ODf4o5XAiETr97kZlWCrlliN+k5XHbRcrVor/J6eucnu1z9MKbsjXyKp6S12tDR+33IDGGvB6GT/Uhqecscu6GvAmOVdqw5w35tK86BorfVw9NRseM6nfOitmzTfa5azT94ITLU7o8YHuitSg3j7T3pptTGWoNtlpSLOffegbISkFqNNLcg7M9SQtbyGj1yrvOlgaBx61xeOueW0OGZIkzltd/rsPe1aDrMR/JZfqpb726TwPWGciNaOtXAwue1OnPs1yQta/xv1UI3CtpsXROWXo/nRrvC92xNADwSdjR8aIJQYsVvo1GhGi9wGK/kSx6Bd7xmgMx9ZoXbDdrIjtMfx/u0nKjW6Lp3RbuoC5084ZcqrY6O4ADNiVqeR36bsAAAAASUVORK5CYII="
+                  />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+                  <image
+                    id="yt"
+                    width="30"
+                    height="30"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8RFggs3YfaAAAB40lEQVQ4y52VT0hUURTGf+/5BHMaafyTUAsJ2rlzVUMipUbWhDAuQmZXDpgkIbVIceVKEKIom6KCFrmQIFw4yIzEpBs3algo2qaFu0ojQXHl1+Kp+F4z783zu7tz7u+ew72X8xkCgNM0c516QnhrmxXSfOInAELooj4rozZVyfJZ1bqprGbUKISNLqlbBFjd+qqoQDXKKRkIRahLOdWYtLLLa4LqDTu0ojHFHGee1F11FlG7Te/RF1U7goNa16xSOusDV2nRJMSmo6GrPCZBLR+45dn4H8ImYLheMsI6cca5z0tOFYQNZCIXvP9reMo9wqSJecGFtcgdxhjgOSX5N3jBsMsLeqlgjivBYYAFennFCKOUBofhL29JEGaOJuf9FAMDrJLkHSNEjwNDOefY4VdwuITLTHCeTr4fDVtFoGdI0kGKlDvhDzfTh0U7P/5PecMRemjnI8P5017wJR4Qpof5QhssjMPfbOvgJR8RJ0c/ewVIYVjggkNsUsczKhli0qMvkz2LbSr5fSQ4zUPiLHHbEc13H1sWy1xwVHjCBhuM46cG1lBCU4FnJ0JpJUyylJH0reNWF+VkEYoeY+h/s4e+7Rk5ZXRNEV+7qVVMmQO7MQ6NroUb1HPCp90t1phi2ja6f6mnWy+aqqt6AAAAAElFTkSuQmCC"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h4 class="text-white text-center mb-3">The Best Way To Design Your Awesome Home!</h4>
+            <form>
+              <div class="mb-2">
+                <label for="text" class="text-muted mb-2">Full Name*</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-2">
+                <label for="email" class="text-muted mb-2">Email*</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="text" class="text-muted mb-2">Phone Number</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="d-grid text-success"><input type="submit" class="btn bg-primary-default text-white p-3 fw-bold" value="Submit Your Information" /></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="bg-gray w-100 pt-5 px-3 px-md-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-center mb-5">
+            <div class="features__icon me-4">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                <image
+                  id="icon1"
+                  width="80"
+                  height="80"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8WFg7A8TRqAAADr0lEQVRo3u3av2vUYBzH8fdd7eCiLqJgcSg4KDiIgktFc1T7YxCkv1RcdRC3XrVaK9hWW1sXHSo4dFF70n9BsRTF35OD9peL9IfFxXYUyjnkyV3y5J4nudxz3iH5LBfum0tePN/nkpAkMYXR3CLBbZMb3GKYZ+MMEms6zPNOkGWm+oC3XONmmSOaAvYzAMASG2wzSUwa5lmcYAmA2/RXC9DNW+Q7liAOmCCWDvTyABZNEksF3vTxDBNVx8HT7FZUHnt4g4KXcvEc4jR1wABZhqIDE4ozyWsaVL8oyFsosOY+XlEHQH90YvQW9wXwYIGUaPQgN6PuRn+q+8Gv3PJWDnh49pgsS7xaEvzxEO1RHCTLHfPAER7llg/ypQDPkngZ4LxEnGYPMARRiFFarOO10cYkta5vF7BYBmCIvn8B1PMA2sgoiTfKD1TNvUnB0xPvFEuM9i9eJsW8xGsH4C1vFcRUNGIUoI7XSkuO6J2L8y7i9XIAz4jPFYm3xcNbZ4NWQWxXEu+GJ4YF9orL0RUsiZfx8ADWtcSV4ojhgL0MB/De5Xh+ovtYO49VHDEMMAyvxcVziO8EMaMk9poA5nmquefn2cQWJdFp9HAwMQh4zcWbk3gdGp6eOBeeqAdeZCSA917Jk4mTSuK16MBDAKxKvBoXr1nDc4jvAegoQFwFYERHDJ6Dq1gSLxOaZxObXcQaD9EKJqqAztFLzfsQiucQPwhiplhiYWAPRwN5TSF5NrEpBPFqWGAPo4KnmnvF8YKIzly8V4joB7p5sxKvMyJPJnrn4qyOKAODeR8j8RziRwA6NcQeHTAteD81vFMReTbxlIb4E4BRL9ENTDMmeJbEe2aE5xA/KYhWIWIeqON1AfCpZJ5NPJkjPgsmOsBuJe9pjnfSAM9L7PIR841Ou4Hd3Be8lI931jBPT/yWI47ZxKTE+/YPeA7xsyA+VRK7ITEVzPtMo2Gene285AgAz7nApquyn2l2AZBOUq/gPSkzD9ZpFKN41jeKFmsA1Ce5wjhrEg8ecK7MPJn40FOxieNcSUxBgj3iNlk+9v3B8vLs7OAFR4A3HJMqdSyTTQJZH8/JRNl58JsJRWWJrKnHEGVMDIyBlU4MjIGVTtUDS3up4jzHQ6w1w2SlgA1cCrHWZinA/7zFdr7yRlFp8DyArBhwhsuKynjpwKpvcQyMgZVODIyBlU4MjIGVTgyMgZWO/op6L4e19Z2h9rEzYCt7owN7w7w4Eph28XZIpFR9i6se+BesGZ+BkYnAyAAAAABJRU5ErkJggg=="
+                />
+              </svg>
+            </div>
+            <div class="features__text">
+              <h3 class="text-muted fw-semibold">Best Homes</h3>
+              <small class="text-muted">Design Becoming like this is one of your goals here are some general pointers</small>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-center mb-5">
+            <div class="features__icon me-4">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="53" viewBox="0 0 80 53">
+                <image
+                  id="icon2"
+                  width="80"
+                  height="53"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA1CAQAAAB8IaTPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8WFw7Z6gUrAAAB5klEQVRo3u2ZPUgcQRiGn1nPlcMzSkxh4yH2AU1M6bVpbdT2TGGTwkKwUNsgZymWRi3DphVBrBI7QRT7BHMYEIlw6qmw4Grh37kzuuYk982Gfbr5+IZ5mJcZ9kd5kGGSQbI42ENAkS98oqy8DN/plvZ5gE1yKSau9U7wpX0qcGkEuhlX3i+ywAcWpJ1CDDEPFJV3jsMZjVxIG4VQnJAmcHAA3zo9uMAHHJtOrhHrBVPXmp3SIgacO8EmfkjbPGppM1c7eM6WtIiBLupuBMv0SNsYKNEcg4gTwf9e8OqQ1NMvLWKgHkB59j0m3CMmEfssSosYyOPeRHxIi7SNgeSiTgStIBFMBKVJBJ9LSqu8ZCpy1jqf5QQzDEfOytROMIYR/2EgclZRUvCUr7VbPpoYRlwr3vCRbMW4zDJz+odUKcF3rNEQqvXRwUS4USriEU0PYJR0uKTvYBtLVS+7yOwTO18Zqw00cRYl6PK2asHVJ3eu8N5Q3WY/XJKKeIZZglBtk0G9UX/tdHld9bJ7/P6L7lbaqbsdlfgZOsMlmk0R+2z8w52r5ICD6CbrL+oYCAaAi5IW0VC4QOCwC6TJS/to5EkDu8orMAbY+b8YppX3gm90Sfs8wBY5hyN6KbCjXZuyBOxQoJfjSyvPXiOUghHtAAAAAElFTkSuQmCC"
+                />
+              </svg>
+            </div>
+            <div class="features__text">
+              <h3 class="text-muted fw-semibold">Great Prices</h3>
+              <small class="text-muted">Design Becoming like this is one of your goals here are some general pointers</small>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-center mb-5">
+            <div class="features__icon me-4">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+                <image
+                  id="icon3"
+                  width="80"
+                  height="80"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAQAAAAkGDomAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfmCw8WFzVo4ewPAAAIFElEQVRo3r3beZBUxR0A4G9G5DSwlBBBPCi11HhfYJQqZRcPlksxHIoQDSKbqEmM8UqJOQo0ITEaNYpGYyVaurhowChoUI6UZ8CgKUI81gPPACqIG9FaWTZ/vDc7x76ZeTOzy+8fhj7efHT39OvX/Ug02OnRwyg1jrGfKq22etsayy32RVThxE4GDnK56XpH5Gw1363W5SYnc/5ea3lk9Y6IpCu96tI81++jzny7FQbWWqTakk4h9rXU3BCw1s8Mt4eEpAFuDEusM8L/cqt1yfg8ykJdMcwSo3zWobz+ljsMvOgqy9vSWw1zScirsal9xXQLpnhCYke24m6WOgwtZjk+g8d49brm56WBo0Pea67WGhK/1mHAOxyFZhNdZ0cWb35hXgo42l9CXo256kLi4x1EPNO5YLqFWenjCvKGZQIvCzv3Xh/irg4ldnFD2Ir35+RMLsD7rUf1SAPP9AyYo44OJk60Pza6Kk/+7AjeDS7T15Q0sMkozyBhXocTLwA35p0V2k0sbvBjMD0N7DxileHY7k8ReT0ja6R4nODrmdNM5xBPtAtWRf5Gdy3Aa0bCydl3kiajPJtDvBsMc1OZwEPBPwqUaIng1Yd3l0Oz7yQ0qfW4YRLm4U7fcj5Y6ydlAgeBtwuU+Hlbl/ZzVMibZirYKxeYTTzOeXbFp07xUZnAYPraGpnXDRyfk1pvmpbwJ9Wj/WomIAYdPSMcJVVmS5QJDKJXZGr3iLSAJ5gDtbRvwcxWhM/0xkx8V2sZtA/B3pF5P7W7T8PP2zWBl8MxGQyNTdHANHGtU8xxYQXERgjHVm6sKFDviFTtZJ4CTWr90Qib1LkLzHRHGR39HDgpz5yXL5JGpGon8xZqMsNHaFUXTjblEN+zFr2ML6nWaQbiPesKAdPRambZxDMcBMaVVOtK8IAd8YDlE8/QoCv+4wcl8CarRrNbiAssj5jm1dgYm7eP28HNwQywy8T4/7LHDHIMjjXQ4k7iDbDSILzpHM2lAkshlsc7zJP2xzajvRMkxe3iIDI7el6Bji7M6x5Zp4drrLYfmp3tn6nk0lowsxWPMyBPK46zQFe8Esn7jXsNtMWGtmk/6UgXu89YXfCZcZ5IFy9n6yPhD2aAO32v3d0lzauO5F0efvrcq7ZoVeVAfdrynzfNm5kVom91haPVTMxAHTnEuDx6OTYn903X+XPWY2mZwICYcEE7YmHer0PeQpucar+MnPct02Cp7e2/qjwgrS4kh1iMdwV40Lla0Ndgu2Oz9Tbn/6Jyge2JY0viscWWOF9TPjCbuI8RJfFiRyXATGIt8k0sFfBKnaijialZ6xU1NnQsr3IgY9QU4M0NeQ3l8SoHjvVQ210jindlyJtSHq9SYKfzKgPuBF4lwBTv1c7klQ9M86o7k1cusDDvVx3HKw9YjJfaS/04d2Wyc4BjYvK4yO8r3NMpAzjGwzF4C9zTUcTS7sVpXk1B3hQ7BHvMF+GSsradigB7GeoQe+llm080et7GLN5/C/K248KixJGas06dYgKTxpvulLZjsSBarXF4Ad4vc3jsKEIcaZEWY4sRcx+aat0U7qZERz7e1eAh52Qt25PuCg4T3J5DHGmRbnjZMYUHQGYL9nRbuCfNDi9Z5V2b7WZPQ8Pd+tJ4+VsxxXvdmGLjMw3sb7Eh4BO3uDvcG01FP+PVurgkXj5iisd0HygSqS7u42mHg3tcHu9pIQYviHRH3+b7Tm/j8Y7h1scBJixWi+3qwhksXlwfHk8U4gXXvzskPmKkbnjLAD3jEIOJ+odq0eK8TuHRakZ45TN0Q6OTjLIN+1ppcDHgHn4B5nigU3gp4uPh50bVPvD3eMQkrtAbL5vdaTw4XXUGD/GIiYbuNuqNkf4Wm9fDh6rwiAkxeSMt1D2LF8TJluiJ9aqjx2LSKL3xWgk8vnAfeCN266V4NTkTS6oVB1sR3YqpE4nHSuBBPYR1i/MW6Y631Hi/XW4RYtLREGPPOTtW+xxHxDhHTvHY3Z6RJQoSEw2b9MeAcMvidGdJtm0oJlRhVuR57xpH4yCvx+TBVqdZFVluuMXRY7GLKgh5mS/3pON3kZcMztD3KALcRRKNLnKvgfpYmoe40miL9TTYimxiMuPP2khevggeh7oXKbXEWdap8VS4zOhjqaGRJVcaHdXRyfCwuZ9ai8KXeyabZJJJxhU8yu8HMd7wWuxI70uvhOIR900D3wA/Cnmvq9FggQUWeNTHEPniYdKB4K3YbV0acWWKmPQvcHXIq85aZgUPPM0RlxqqChtKfFUgkzgkHjHpqbbMXJ4Cb8CdCZaVxEsRN6CPJ/MSx4TEp/QnaUk4jtrz8kd33wbzSwamH1jzE1eExAPUSyRtU5+XF/xGv2qXfqmBeDvzRKiDieN8hRFGJ3GL1yJ5cxwHtuWkH+JacH3MO3E5xGVuBlODFXXviOlijmvAw6Zk/Uz6e84BWOWEivZeDrbCAGx1qtUR+Yf6NxqDiTo+70BPOwBNpla4NVSsFYPj2P7RezP5eBO84CB8ZWr4wknnEYOFxcdRwNkRvIQRnrNAX3xpkr9WzCtGPBu81P44drZZoNlcr/hclQEONsI+Yf67JnuhQ3hBfMPycCyOzLjuNy3TExNygSd6osAab7t5rs3zqljlxC9d7z7r7escs/TCase3b8HevmNau7NcNrrfrcUesyskZscmQ7yb78R9fyc6xF66YYNGL1hT+X5zgdjbwzmj8EUTrd/5/xsifyRNcL4h+tnsWfUeDKax/wPusQoLak1k0gAAAABJRU5ErkJggg=="
+                />
+              </svg>
+            </div>
+            <div class="features__text">
+              <h3 class="text-muted fw-semibold">Free Suport</h3>
+              <small class="text-muted">Design Becoming like this is one of your goals here are some general pointers</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITEMS SECTION -->
+    <section id="items" class="bg-light py-5 px-3 px-md-0">
+      <div class="container text-center">
+        <h2 class="py-4 fw-semibold">The Beauty Of Contrast</h2>
+        <p class="lead text-muted">We turn you to pro lighting stategies to highlight features create intrique and make the most of indoor and Outdoor rooms</p>
+        <img src="img/green-line.png" alt="green line" />
+        <img src="img/green-line.png" alt="green line" style="margin-left: -5px" />
+
+        <div class="row g-0 g-md-2 mt-5">
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+              <img src="https://source.unsplash.com/random/300x245" class="card-img-top" alt="Beautiful Kitchen" />
+              <div class="card-body text-start bg-gray">
+                <h5 class="card-title">Beautiful Kitchen</h5>
+                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+              <img src="https://source.unsplash.com/random/300x246" class="card-img-top" alt="Beautiful Kitchen" />
+              <div class="card-body text-start bg-gray">
+                <h5 class="card-title">Luxurious Bedroom</h5>
+                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem">
+              <img src="https://source.unsplash.com/random/300x247" class="card-img-top" alt="Beautiful Kitchen" />
+              <div class="card-body text-start bg-gray">
+                <h5 class="card-title">Awesome Garage</h5>
+                <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section id="project " class="bg-gray w-100 py-5 px-3 px-md-0">
+      <div class="container">
+        <div class="row gx-5">
+          <div class="col-md-6">
+            <h2 class="pb-5 fw-semibold">Welcome to Our Company</h2>
+            <img src="img/green-line.png" alt="green line" class="mb-5" />
+            <div class="d-flex mb-3 mt-2">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+                  <image
+                    id="icon4"
+                    width="42"
+                    height="42"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABXFBMVEVo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QAAAADZlWZNAAAAcnRSTlMABj+ArtTt+TGZ/NzAte4v/tN/O7YIjvv9qTWPJM/LNOqCA+w38/ZP9UJAToSDjcxcsrMuJ7StKu8pnAXVBDYH8GZlPn6/0dK+AdoJ6a/65PEw5dvCpeKmwQIl9/iFDOEKVTp9LJEyrBAzuWSW0PTKJnomwMxvAAAAAWJLR0RzQQk9zgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+YLEQsiHCxaploAAAJaSURBVDjLjZXtXxJBEMeHZzzkSYRbeebAhzTKSMjsDApJEUWNno4ezPIpLcv5/190exzc7spR82b3Zr43n93Z3d8AcOZwutwer8/n9bhdTgfYm3/KiygFpoPB6YCEGJry24DhYASjMzEzlyM2E8XIbHgMGE/IZC7J+5JzRE7FRTKdwWzuboJcFjNp4f88KSjjVqUUSLHEOkrzC4t2e11cmGfYdH7pnn1dlpfyozXEM2RlQglhhWSGe0vgfZhoZXxg1lN+yO5IWX2Ux3xllfEpWfmxMQkStpxrURxYdI2pGanSwR+pMeSTdRza+lPLXYvQM95AJukzFS1TN0f+57gBUG94mKQvkLWXVsDTqEMTtxi0ZSCvUtvGuGMFtrAJLoxZjnaDErtxpbNLJ3tWJIYu2JfqTFVkSrgVBWp00rUidWkf1ABb0wNKHB5B2Ej/mgn1VCi+YdG3xhqld5IxvmdCH4rgqzLf2jJXgSYTqvoEdLPKkGyEotwCNKX/cUR+6gO/AG5bmqIVRuhn7nbp2+KKpSnKl2OTPP7KkrRY3BFAuw0nJnrCJf2mH0ETvwNvO+KhDg7WqV+XqICe0iOTT3mn57BOL6H4/s909Ix3JeklhHO8ENBL/cFc8q4L/EGHKyKmvcZr3pEjV8Z4JGcFYdF+aty3/gxNmUtgGSZaGRPmrPMvyZB+dYZzXYic9mSTESJd3m4mydsNL4XF/xVNgL6NFP/GzB/RGU/JpCYKfG2cwOsWnkXcvi0N20bpVheDsW2D2qAZ9VqVSqtnNKPzCSWkLU4Ndbsh9W6L+wsHPphk+naeEQAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+              <p class="text-muted ms-3 w-75">The Best Unbounce templates that are considered to be within these categorie.</p>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+                  <image
+                    id="icon4"
+                    width="42"
+                    height="42"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABXFBMVEVo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QAAAADZlWZNAAAAcnRSTlMABj+ArtTt+TGZ/NzAte4v/tN/O7YIjvv9qTWPJM/LNOqCA+w38/ZP9UJAToSDjcxcsrMuJ7StKu8pnAXVBDYH8GZlPn6/0dK+AdoJ6a/65PEw5dvCpeKmwQIl9/iFDOEKVTp9LJEyrBAzuWSW0PTKJnomwMxvAAAAAWJLR0RzQQk9zgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+YLEQsiHCxaploAAAJaSURBVDjLjZXtXxJBEMeHZzzkSYRbeebAhzTKSMjsDApJEUWNno4ezPIpLcv5/190exzc7spR82b3Zr43n93Z3d8AcOZwutwer8/n9bhdTgfYm3/KiygFpoPB6YCEGJry24DhYASjMzEzlyM2E8XIbHgMGE/IZC7J+5JzRE7FRTKdwWzuboJcFjNp4f88KSjjVqUUSLHEOkrzC4t2e11cmGfYdH7pnn1dlpfyozXEM2RlQglhhWSGe0vgfZhoZXxg1lN+yO5IWX2Ux3xllfEpWfmxMQkStpxrURxYdI2pGanSwR+pMeSTdRza+lPLXYvQM95AJukzFS1TN0f+57gBUG94mKQvkLWXVsDTqEMTtxi0ZSCvUtvGuGMFtrAJLoxZjnaDErtxpbNLJ3tWJIYu2JfqTFVkSrgVBWp00rUidWkf1ABb0wNKHB5B2Ej/mgn1VCi+YdG3xhqld5IxvmdCH4rgqzLf2jJXgSYTqvoEdLPKkGyEotwCNKX/cUR+6gO/AG5bmqIVRuhn7nbp2+KKpSnKl2OTPP7KkrRY3BFAuw0nJnrCJf2mH0ETvwNvO+KhDg7WqV+XqICe0iOTT3mn57BOL6H4/s909Ix3JeklhHO8ENBL/cFc8q4L/EGHKyKmvcZr3pEjV8Z4JGcFYdF+aty3/gxNmUtgGSZaGRPmrPMvyZB+dYZzXYic9mSTESJd3m4mydsNL4XF/xVNgL6NFP/GzB/RGU/JpCYKfG2cwOsWnkXcvi0N20bpVheDsW2D2qAZ9VqVSqtnNKPzCSWkLU4Ndbsh9W6L+wsHPphk+naeEQAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+              <p class="text-muted ms-3 w-75">The Best Unbounce templates that are considered to be within these categorie.</p>
+            </div>
+            <div class="d-flex">
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+                  <image
+                    id="icon4"
+                    width="42"
+                    height="42"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABXFBMVEVo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QBo5QAAAADZlWZNAAAAcnRSTlMABj+ArtTt+TGZ/NzAte4v/tN/O7YIjvv9qTWPJM/LNOqCA+w38/ZP9UJAToSDjcxcsrMuJ7StKu8pnAXVBDYH8GZlPn6/0dK+AdoJ6a/65PEw5dvCpeKmwQIl9/iFDOEKVTp9LJEyrBAzuWSW0PTKJnomwMxvAAAAAWJLR0RzQQk9zgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+YLEQsiHCxaploAAAJaSURBVDjLjZXtXxJBEMeHZzzkSYRbeebAhzTKSMjsDApJEUWNno4ezPIpLcv5/190exzc7spR82b3Zr43n93Z3d8AcOZwutwer8/n9bhdTgfYm3/KiygFpoPB6YCEGJry24DhYASjMzEzlyM2E8XIbHgMGE/IZC7J+5JzRE7FRTKdwWzuboJcFjNp4f88KSjjVqUUSLHEOkrzC4t2e11cmGfYdH7pnn1dlpfyozXEM2RlQglhhWSGe0vgfZhoZXxg1lN+yO5IWX2Ux3xllfEpWfmxMQkStpxrURxYdI2pGanSwR+pMeSTdRza+lPLXYvQM95AJukzFS1TN0f+57gBUG94mKQvkLWXVsDTqEMTtxi0ZSCvUtvGuGMFtrAJLoxZjnaDErtxpbNLJ3tWJIYu2JfqTFVkSrgVBWp00rUidWkf1ABb0wNKHB5B2Ej/mgn1VCi+YdG3xhqld5IxvmdCH4rgqzLf2jJXgSYTqvoEdLPKkGyEotwCNKX/cUR+6gO/AG5bmqIVRuhn7nbp2+KKpSnKl2OTPP7KkrRY3BFAuw0nJnrCJf2mH0ETvwNvO+KhDg7WqV+XqICe0iOTT3mn57BOL6H4/s909Ix3JeklhHO8ENBL/cFc8q4L/EGHKyKmvcZr3pEjV8Z4JGcFYdF+aty3/gxNmUtgGSZaGRPmrPMvyZB+dYZzXYic9mSTESJd3m4mydsNL4XF/xVNgL6NFP/GzB/RGU/JpCYKfG2cwOsWnkXcvi0N20bpVheDsW2D2qAZ9VqVSqtnNKPzCSWkLU4Ndbsh9W6L+wsHPphk+naeEQAAAABJRU5ErkJggg=="
+                  />
+                </svg>
+              </div>
+              <p class="text-muted ms-3 w-75">The Best Unbounce templates that are considered to be within these categorie.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 text-center">
+            <img src="https://source.unsplash.com/random/390x462" alt="Company Img" class="d-none d-md-block" />
+            <img src="https://source.unsplash.com/random/300x356" alt="Company Img" class="d-md-none mt-4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS SECTION -->
+    <section id="clients">
+      <div class="container bg-dark m-auto clients-container py-5 px-3 px-md-5">
+        <div class="row">
+          <div class="col-md-3 px-5 mx-2 px-md-0 mx-md-0">
+            <h5 class="text-white">Our Awesome Clients</h5>
+            <small class="text-muted">The Best Unbounce template that are considered to be within these categories win.</small>
+            <p class="text-muted fst-italic small-text mt-4 mb-5">*More than 500 clients trusted us!</p>
+          </div>
+          <div class="col-md-3 text-center mt-md-5">
+            <img src="img/inspiron-logo.png" alt="Inspiron Logo" />
+          </div>
+          <div class="col-md-3 text-center mt-5">
+            <img src="img/PIXFORT-LOGO.png" alt="PixFort Logo" />
+          </div>
+          <div class="col-md-3 text-center mt-5">
+            <img src="img/flatbox-logo.png" alt="Flatbox Logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMIT SECTION -->
+    <section id="submit" class="py-5 m-auto px-3 px-md-0">
+      <div class="container text-center">
+        <h4 class="text-white">What are you weating for?</h4>
+        <p class="text-muted m-auto mb-4" style="width: 60%">We turn you on to pro lighting stategies to highlight teatures create intrigue and make the most of indoor and outdoor rooms</p>
+        <div class="text-success"><input type="submit" class="btn bg-primary-default text-white p-3 fw-bold" value="Submit Your Information" /></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="pt-5 bg-dark text-center px-3 px-md-0">
+      <div class="social p-3">
+        <img src="img/Buttons.png" alt="Social Buttons" />
+      </div>
+      <p class="text-muted py-3 mb-0">Made with <span class="text-danger">❤</span> in Eart All rights reserved Copyright &copy; 2014 <span class="text-uppercase text-success">My flat</span></p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

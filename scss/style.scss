@@ -1,0 +1,106 @@
+// VARIABLES
+$bg-dark: #0a0a0a !important;
+$bg-gray-light: #ebeaea !important;
+$bg-gray-dark: #333 !important;
+$color-nav: #c5c5c5;
+$color-body: #8c8c8c;
+$font-primary: "Open Sans", sans-serif !important;
+
+// BASE
+html {
+  font-family: $font-primary;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $bg-gray-dark;
+  color: $color-body !important  ;
+}
+
+.container {
+  max-width: 940px !important;
+}
+
+// SECTION HOME
+#home {
+  max-width: 1000px !important;
+
+  .section-home {
+    &__logo,
+    &__text {
+      position: relative;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 5px;
+        width: 5rem;
+        background-color: #74ff00;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        z-index: 10;
+      }
+    }
+
+    &__text {
+      color: $color-nav;
+    }
+  }
+
+  .social-img {
+    height: 30px !important;
+    width: 30px !important;
+  }
+}
+
+.fs-10 {
+  font-size: 13px;
+}
+
+// SECTION FEATURES
+.bg-gray {
+  background-color: $bg-gray-light;
+}
+
+// SECTION ITEMS
+.card .bg-gray {
+  background-color: $bg-gray-light;
+}
+
+// SECTION CLIENTS
+#clients {
+  background-color: #616161;
+
+  .clients-container {
+    max-width: 1000px !important;
+  }
+}
+
+.small-text {
+  font-size: 12px !important;
+}
+
+// FOOTER
+.social {
+  background: $bg-gray-dark;
+  display: inline-block;
+}
+
+.btn {
+  &:hover {
+    background-color: #5bc900 !important;
+  }
+}
+
+.card:link {
+  transition: all;
+}
+
+.card {
+  transition: all 0.4s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translatey(-1rem);
+  }
+}
